@@ -1,3 +1,7 @@
+////*******/////////*******/////////*******/////////*******/////////*******/////////*******/////////*******/////////*******/////
+
+// Planetary Data of Earth and Venus Link Line Distances
+
 [0.000 ,
 169.598 ,
 173.463 ,
@@ -733,7 +737,7 @@
 
 ////*******/////////*******/////////*******/////////*******/////////*******/////////*******/////////*******/////////*******/////
 
-// OSCOSCOSCOSCOSCOSC
+// OSC
 
 // create our OSC receiver
 OscIn oin;
@@ -754,22 +758,11 @@ while ( true )
     .2 => s.gain;
     .1 => r.mix;
     
-    // for loop
- //   for( 0 => int foo; foo < 723; foo++ )
-   // {
-        // debug-print value of 'foo'
-     //   <<<foo>>>;
-       // planetDistance2[foo] => s.freq;
-       // 100::ms => now;
-   // }
-    // wait for event to arrive
-    oin => now;
+    oi     now;
     
-    // grab the next message from the queue. 
-    while ( oin.recv(msg) != 0 )
-    { 
-        // getFloat fetches the expected float (as indicated by "f")
-        msg.getFloat(0) => float notes;
+  / grab the next message from the queue.       ile          .recv(msg) != 0 )
+    {            / getFloa    tch       he expected float (as ind    ed by        
+         sg.ge       ) =>     t notes;
         // print
         <<< "got (via OSC): ", notes >>>;
         notes $ int => int notesIndex;        

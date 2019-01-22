@@ -751,7 +751,7 @@ while ( true )
     
     // SOUND DESIGN
     SinOsc s => JCRev r => dac;
-    .2 => s.gain;
+    .1 => s.gain;
     .1 => r.mix;
     
     // for loop
@@ -789,7 +789,7 @@ while ( true )
 // SOUND DESIGN
 
 SinOsc s => JCRev r => dac;
-.2 => s.gain;
+.1 => s.gain;
 .1 => r.mix;
 
 // for loop
